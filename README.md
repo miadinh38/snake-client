@@ -15,7 +15,7 @@ Before you can run this client, you will need to be running the server side whic
       <li> <code>A</code>: Move Left - move left one square (unless facing right) </li>
       <li> <code>D</code>: Move Right - move right one square (unless facing left) </li>
     </ul>
-    Note: Snakes cannot instantly make a 180 turn by moving in the opposite direction.
+    <em>Note: Snakes cannot instantly make a 180 turn by moving in the opposite direction.</em> <br>
 
 
   <li> Press the following keys to broadcast a message to the server: </li>
