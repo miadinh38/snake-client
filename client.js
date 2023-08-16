@@ -1,5 +1,6 @@
 const net = require("net");
 
+// establish a connection with the game server
 const connect = function () {
   const conn = net.createConnection({
     host: '192.168.0.104', // IP address here,
@@ -12,6 +13,10 @@ const connect = function () {
   conn.on("connect", () => {
     console.log("Successfully connected to game server");
     conn.write("Name: DPN");
+  });
+
+  conn.on("connect", () => {
+    conn.write("Move: up");
   });
 
   conn.on("data", (data) => {
