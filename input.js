@@ -9,7 +9,7 @@ const setupInput = (conn) => {
   stdin.setEncoding("utf8");
   stdin.resume();
   stdin.on("data", handleUserInput);
-  
+
   return stdin;
 };
 
@@ -30,6 +30,17 @@ const handleUserInput = function (key) {
   if (key === "d") {
     connection.write("Move: right");
   }  
+
+  // implement some special keys that send messages to the server
+  if (key === "h") {
+    connection.write("Say: Hello");
+  } 
+  if (key === "g") {
+    connection.write("Say: I love you");
+  } 
+  if (key === "j") {
+    connection.write("Say: Nice day!");
+  } 
 }
 
 
