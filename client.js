@@ -15,10 +15,6 @@ const connect = function () {
     conn.write("Name: DPN");
   });
 
-  conn.on("connect", () => {
-    conn.write("Move: up");
-  });
-
   conn.on("data", (data) => {
       if(data.includes("you ded cuz you idled")) {
         console.log("Server message: ", data);
